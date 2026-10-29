@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voxmirror"
+version = "0.1.0"
+description = "Mirror any voice. Clone a timbre with Qwen3-TTS, verify every line, generate audio."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+keywords = ["tts", "voice-clone", "qwen3-tts", "audio", "speech"]
+dependencies = ["numpy", "soundfile"]
+
+[project.optional-dependencies]
+# 生成音频所需（质检/克隆只依赖上面的 numpy + soundfile）
+qwen3tts = ["torch", "qwen-tts"]
+
+[project.scripts]
+voxmirror = "voxmirror.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourname/voxmirror"
+Repository = "https://github.com/yourname/voxmirror"
+
+[tool.setuptools.packages.find]
+include = ["voxmirror*"]
