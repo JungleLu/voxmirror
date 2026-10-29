@@ -1,0 +1,5 @@
+This is a cloned voice speaking through VoxMirror.
+Every sentence is checked for pitch and timbre before it is kept.
+If a line drifts, the tool re-samples it with a different seed.
+The result is a clean, consistent spoken audio file.
+You can register as many voices as you like.
