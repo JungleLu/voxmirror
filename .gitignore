@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# voxmirror 运行时产物
+.venv/
+voices/
+# 已注册声线默认落在 ~/.voxmirror；若改到项目内请按需忽略
+.voxmirror/
+
+# 生成输出（不要提交）
+output*.wav
+output*.mp3
+parts/
+parts_orig/
+report.txt
+guard_report.txt
+lines.json
+
+# 编辑器 / 系统
+.DS_Store
+*.swp
